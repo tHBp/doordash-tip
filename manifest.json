@@ -1,0 +1,34 @@
+{
+  "name": "Doordash Tip Indicator",
+  "description": "Get the different tips for Doordash",
+  "manifest_version": 3,
+  "version": "0.0.1",
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "action": {
+    "default_title": "Doordash Tip Indicator"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "build/script.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.doordash.com/consumer/checkout*"
+      ],
+      "js": [
+        "build/content.js"
+      ]
+    }
+  ]
+}
