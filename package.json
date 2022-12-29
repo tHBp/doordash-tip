@@ -1,0 +1,30 @@
+{
+  "name": "doordash-tip",
+  "version": "0.0.1",
+  "description": "Get the different tips for Doordash",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup --config rollup.config.js",
+    "dev": "nodemon"
+  },
+  "repository": "https://github.com/tHBp/doordash-tip.git",
+  "author": "The Half Blood Prince <thehalfbloodprince.github@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "rollup": "^2.57.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "index.js",
+      "manifest.json"
+    ],
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "ext": "js json svg html css",
+    "exec": "npm run build"
+  }
+}
